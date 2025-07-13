@@ -1,7 +1,6 @@
-#!/usr/bin/env python3
 """
 Jogo de Adivinhação
-Autor: Eduardo José (com ajuda do ChatGPT)
+Autor: Eduardo José
 Descrição:
   - O computador escolhe um número de 1 a 100.
   - O jogador tenta adivinhar.
@@ -22,23 +21,23 @@ def jogo_adivinhacao():
         entrada = input("Digite seu palpite (1‑100): ")
 
         if entrada.lower() == "exit":
-            print("👋 Você saiu do jogo. Até mais!")
+            print("Você saiu do jogo. Até mais!")
             break
 
         try:
             chute = int(entrada)
         except ValueError:
-            print("⚠️ Digite um número inteiro válido ou 'exit' para sair.")
+            print("Digite um número inteiro válido ou 'exit' para sair.")
             continue
 
         tentativas += 1
 
         if chute < numero_secreto:
-            print("🔻 Seu palpite foi MENOR que o número secreto.")
+            print("Seu palpite foi MENOR que o número secreto.")
         elif chute > numero_secreto:
-            print("🔺 Seu palpite foi MAIOR que o número secreto.")
+            print("Seu palpite foi MAIOR que o número secreto.")
         else:
-            print(f"🎉 Parabéns! Você acertou em {tentativas} tentativas.")
+            print(f"Parabéns! Você acertou em {tentativas} tentativas.")
             break
 
 if __name__ == "__main__":
